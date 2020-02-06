@@ -1,2 +1,24 @@
 console
 exit
+compile
+test
+submit changyao.chen@gmail.com NGFK2AHkTEQsPqWw
+sbt 
+compile
+console
+test
+console
+test
+compile
+main
+console
+test
+console
+test
+compile
+console
+exit
+compile
+test
+submit changyao.chen@gmail.com iZZEFCUKgHR0MIis
+submit changyao.chen@gmail.com b4o94xXAirmwL9pe
