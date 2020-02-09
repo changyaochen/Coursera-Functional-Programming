@@ -55,11 +55,11 @@ trait FunSets extends FunSetsInterface {
    */
   def forall(s: FunSet, p: Int => Boolean): Boolean = {
     def iter(a: Int): Boolean = {
-      if (!contains(s, a) || !p(a)) false
+      if (contains(s, a) && !p(a)) false
       else if (a > bound) true
       else iter(a + 1)
     }
-    iter(-1 * bound)
+    iter(-bound)
   }
 
   /**
@@ -71,7 +71,7 @@ trait FunSets extends FunSetsInterface {
   /**
    * Returns a set transformed by applying `f` to each element of `s`.
    */
-  def map(s: FunSet, f: Int => Int): FunSet = (x: Int) => exists(s, (x: Int) => s(f(x)))
+  def map(s: FunSet, f: Int => Int): FunSet = (x: Int) => exists(s, (y: Int) => s(f(y)))
 
   /**
    * Displays the contents of a set
